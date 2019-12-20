@@ -1,0 +1,30 @@
+
+<h2>
+
+<form method="post">
+  {% csrf_token %}
+  {{ user_form.email}}
+  {{ user_form.username}}
+  {{ profile_form.as_p }}
+  <button type="submit">Save changes</button>
+</form>
+</h2>
+
+Your profile
+<h2>{{ user.bio }}</h2>
+<ul>
+  <li>Date Joined: {{ user.profile.date_joined }}</li>
+   <li>Username: {{ user.username}}</li>
+    <li>Username: {{ user.country }}</li>
+  <li>Location: {{ user.location }}</li>
+  <li>Birth Date: {{ user.profile.birth_date }}</li>
+  {{ user.profile.bio }}
+  {{ user.profile.country }}
+  {{ user.profile.age }}
+  {{ user.profile.interests }}
+  {{ user.email}}
+
+
+
+
+</ul>
